@@ -6,9 +6,9 @@ import {
 } from "@sberdevices/assistant-client";
 import { H2, Button } from '@sberdevices/plasma-ui';
 
-import cardF  from "./images/cardF.png"
-import cardN  from "./images/cardN.png"
-import cardP  from "./images/cardP.png"
+import card1  from "./images/Card1.png"
+import card2  from "./images/Card2.png"
+import card3  from "./images/Card3.png"
 import card_0 from "./images/card_0.png"
 import card_1 from "./images/card_1.png"
 import card_2 from "./images/card_2.png"
@@ -139,6 +139,8 @@ function App() {
     };
 
   const Header = styled(H2)`
+    color: #D2D2D2;
+    text-shadow: 1px 1px 2px grey, 0 0 2em #fffafaf6;
     text-align: center;
     padding-top: 1rem
   `
@@ -235,7 +237,7 @@ function App() {
 
     {side ? 
         <div class="card" onClick={()=>{setSide(false)}}>
-          <img src={cardP} class="card_photo" alt="Рубашка" />
+          <img src={card1} class="card_photo" alt="Рубашка" />
         </div>
       :
       <div class="layer">
@@ -251,7 +253,7 @@ function App() {
 
   {side2 ? 
         <div class="card" onClick={()=>{setSide2(false)}}>
-          <img src={cardN} class="card_photo" alt="Рубашка" />
+          <img src={card2} class="card_photo" alt="Рубашка" />
       </div>
    : (<div class="layer2">
    <div class="card">
@@ -266,7 +268,7 @@ function App() {
 
   {side3 ? 
         <div class="card card--right" onClick={()=>{setSide3(false)}}>
-          <img src={cardF} class="card_photo" alt="Рубашка" />
+          <img src={card3} class="card_photo" alt="Рубашка" />
         </div>
    : (<div class="layer3">
    <div class="card card--right">
