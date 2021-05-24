@@ -228,7 +228,7 @@ function App() {
   return (
   <React.Fragment>
 
-  <Header>Рассклад "Три карты"</Header>
+  <Header>Расклад "Три карты"</Header>
   <div class="card__container"> 
     
 
