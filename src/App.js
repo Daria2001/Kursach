@@ -191,6 +191,21 @@ function App() {
             console.log("reload")
             createNewCards()
             break;
+          case "showPrPastFuture":
+            switch (action.data){
+              case "прошлое":
+                setSide(false)
+                break;
+              case "настоящее":
+                setSide2(false)
+                break;
+              case "будущее":
+                setSide3(false)
+                break;
+              default:
+                break;
+            }
+            break;
           case "flip_card":
             console.log(action.data)
             switch (action.data){
