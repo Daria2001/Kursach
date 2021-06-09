@@ -1,21 +1,6 @@
-body {
-  
-  background: url(./images/Back.png) no-repeat;
-  -moz-background-size: 100%; /* Firefox 3.6+ */
-  -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-  -o-background-size: 100%; /* Opera 9.6+ */
-  background-size: 100%; /* Современные браузеры */
-   
-  background-blend-mode: multiply;
-  background-color: #696969;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
- .card_photo{
+
+.card_photo{
   width:200px;
   height:270px;
   border-radius: 5px;
@@ -26,7 +11,6 @@ body {
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
-
  }
  .card {
    margin-top: 20px;
@@ -36,3 +20,24 @@ body {
  .card--right {
   margin-right: 0px;
 }
+
+
+@media only screen and (max-width: 768px) {
+  .container{
+    overflow-y: scroll;
+  }
+  .card {
+    margin-right: 0px;
+  }
+
+  .card__container{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 12rem;
+  }
+
+}
+
+
+
+

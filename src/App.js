@@ -225,10 +225,17 @@ function App() {
   const ButtonCard = styled(Button)`
     position: fixed;
     bottom: 10rem;
-    right: 2rem
+    right: 2rem;
+    @media only screen and (max-width: 768px) {
+      position: relative;
+      width: 100%;
+      margin: 2rem 0;
+      right: 0rem;
+    }
+
   `
   return (
-  <React.Fragment>
+  <div class="container">
 
   <Header>Расклад "Три карты"</Header>
   <div class="card__container"> 
@@ -282,7 +289,7 @@ function App() {
   </div>
 
   <ButtonCard onClick={createNewCards} text="Обновить"/>
-  </React.Fragment>
+  </div>
   )
 }
 
