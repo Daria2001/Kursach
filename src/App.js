@@ -178,6 +178,7 @@ function App() {
         const { action } = event;
   
         dispatchAssistantAction(action);
+        
   });
     },
     []);
@@ -186,6 +187,25 @@ function App() {
       console.log("dispatchAssistantAction", action);
       if (action) {
         switch (action.type) {
+          case "reload":
+            console.log("reload")
+            createNewCards()
+            break;
+          case "showPrPastFuture":
+            switch (action.data){
+              case "прошлое":
+                setSide(false)
+                break;
+              case "настоящее":
+                setSide2(false)
+                break;
+              case "будущее":
+                setSide3(false)
+                break;
+              default:
+                break;
+            }
+            break;
           case "flip_card":
             console.log(action.data)
             switch (action.data){
@@ -216,6 +236,9 @@ function App() {
     [newCards]);
 
     const createNewCards = () => {
+      assistant.current.sendData({
+        action: { action_id: "reload" },
+      });
       setNewCards(!newCards);
       setSide(true)
       setSide2(true)
