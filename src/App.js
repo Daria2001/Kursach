@@ -5,6 +5,7 @@ import {
   createAssistant,
 } from "@sberdevices/assistant-client";
 import { H2, Button } from '@sberdevices/plasma-ui';
+import { IconRefresh } from '@sberdevices/plasma-icons';
 
 import card1  from "./images/Card1.png"
 import card2  from "./images/Card2.png"
@@ -143,6 +144,12 @@ function App() {
     text-shadow: 1px 1px 2px grey, 0 0 2em #fffafaf6;
     text-align: center;
     padding-top: 1rem
+    display: inline-block;
+    margin-right: 3rem;
+    @media only screen and (max-width: 768px) {
+      font-size: 1.1rem;
+      margin-right: 0.5rem;
+    }
   `
   const getStateForAssistant = () => {
     console.log("getStateForAssistant: this.state:", state);
@@ -246,21 +253,15 @@ function App() {
     }
 
   const ButtonCard = styled(Button)`
-    position: fixed;
-    bottom: 10rem;
-    right: 2rem;
-    @media only screen and (max-width: 768px) {
-      position: relative;
-      width: 100%;
-      margin: 2rem 0;
-      right: 0rem;
-    }
-
   `
   return (
+    <React.Fragment>
   <div class="container">
-
-  <Header>Расклад "Три карты"</Header>
+   
+  <div class="header__container">
+      <Header>Расклад "Три карты"</Header>
+      <Button onClick={createNewCards}><IconRefresh/></Button>
+   </div>
   <div class="card__container"> 
     
 
@@ -310,9 +311,11 @@ function App() {
  </div>)
   }
   </div>
-
-  <ButtonCard onClick={createNewCards} text="Обновить"/>
+ 
   </div>
+     
+   </React.Fragment>
+   
   )
 }
 

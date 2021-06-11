@@ -1,5 +1,9 @@
 
-
+.header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .card_photo{
   width:200px;
   height:270px;
@@ -23,9 +27,7 @@
 
 
 @media only screen and (max-width: 768px) {
-  .container{
-    overflow-y: scroll;
-  }
+
   .card {
     margin-right: 0px;
   }
